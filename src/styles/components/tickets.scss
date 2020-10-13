@@ -1,0 +1,202 @@
+.tickets-container-header{
+    padding: 0 15px;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1;
+    color: rgba(0,0,0,.7);
+
+    @media (max-width: $screen-xs-max) {
+        display: none;
+    }
+}
+
+.tickets-section+.tickets-section{margin-top: 10px;}
+
+.tickets-header-col,
+.tickets-section-col{
+    padding: 0 10px;
+    width: 20%;
+
+    @media (max-width: $screen-xs-max) {
+        width: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    &:first-child{
+        @media (max-width: $screen-xs-max) {
+            display: block;
+        }
+    }
+
+    &+.tickets-section-col{
+        @media (max-width: $screen-xs-max) {
+            margin-top: 10px;
+        }
+    }
+}
+
+.orders-container{
+    .tickets-header-col:first-child,
+    .tickets-section-col:first-child{
+        width: 30%;
+
+        @media (max-width: $screen-xs-max) {
+            width: auto;
+        }
+    }
+}
+
+.tickers-section-row{
+
+    position: relative;
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    min-height: 90px;
+    background-color: $color-white;
+    color: $color-black;
+    text-decoration: none!important;
+    transition: box-shadow .2s ease-out;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    line-height: 1.2;
+
+    @media (max-width: $screen-xs-max) {
+        display: block;
+    }
+
+    &:focus{color: $color-black;}
+    &:hover{color: $color-black;box-shadow: 0 2px 10px rgba(0,0,0,.05)}
+
+    .title-xs{
+        display: none;
+        @media (max-width: $screen-xs-max) {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 3px;
+            opacity: .6;
+            min-width: 100px;
+            margin-right: 10px;
+        }
+    }
+
+    .match-title{
+        font-size: 16px;
+        line-height: 1.1;
+        white-space: nowrap;
+    }
+    .match-date{
+        font-weight: 400;
+        margin-top: 3px;
+        color: rgba(0,0,0,.5);
+        text-transform: none;
+    }
+
+    .col-price,
+    .col-date,
+    .col-bonus{white-space: nowrap;}
+
+    a{
+        font-size: 14px;
+        font-weight: 700;
+        color: $color-blue;
+        text-decoration: underline;
+        text-transform: none;
+        display: inline-block;
+        line-height: 1.1;
+
+        &:focus{color: $color-blue;}
+        &:hover{color: $color-red;text-decoration: none;}
+    }
+
+}
+
+.tickets-section-detail{
+    padding: 30px 0 50px;
+    max-width: 770px;
+}
+
+.ticket-item + .ticket-item{margin-top: 10px;}
+
+.ticket-item{
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    padding: 5px 15px;
+    background-color: $color-white;
+    font-weight: 600;
+
+    @media (max-width: $screen-xs-max) {
+        flex-wrap: wrap;
+    }
+
+    &+.ticket-item{
+        margin-top: 10px;
+    }
+
+    .title-xs{
+        display: none;
+    }
+}
+
+.tickets-list-col{
+    width: 20%;
+    padding: 0 15px;
+    text-align: center;
+
+    @media (max-width: $screen-xs-max) {
+        width: 33.3%;
+    }
+
+    &.col-download{
+        width: 40%;
+        text-align: right;
+
+        @media (max-width: $screen-xs-max) {
+            width: 100%;
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
+
+
+    .download-link{
+        color: $color-black;
+        text-transform: uppercase;
+        display: inline-block;
+        white-space: nowrap;
+        text-decoration: none!important;
+        font-weight: 700;
+
+        @media (max-width: $screen-xs-max) {
+            padding: 10px 0;
+        }
+
+        &:focus{color: $color-black;}
+        &:hover{color: $color-red;}
+
+        .icon-download{font-size: 18px;margin-left: 10px;line-height: 1;vertical-align: middle;display: inline-block;}
+    }
+
+}
+
+.download-all{
+    margin-top: 20px;
+    @media (max-width: $screen-xs-max) {
+        text-align: center;
+    }
+}
+
+.tickets-list-header{
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    font-size: 16px;
+    line-height: 1;
+    color: rgba(0,0,0,.7);
+    margin-bottom: 10px;
+}

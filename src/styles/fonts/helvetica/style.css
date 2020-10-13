@@ -1,0 +1,11 @@
+@font-face {
+	font-family: "Helvetica";
+	src: local("Helvetica Neue"),
+	local("Helvetica Neue Black"),
+	url("helvetica_neue.woff2") format("woff2"),
+	url("helvetica_neue.woff") format("woff"),
+	url("helvetica_neue.ttf") format("truetype");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}

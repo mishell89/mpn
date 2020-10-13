@@ -1,0 +1,233 @@
+.sidebar-menu{
+    position: relative;
+    background-color: $color-white;
+    margin-bottom: 30px;
+
+    &-title{
+        padding: 15px 30px;
+        border-bottom: 2px solid $color-light-gray;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 1.2;
+    }
+
+    &-list{
+        list-style: none;
+        padding: 30px;
+        margin: 0;
+
+        & > li+li{margin-top: 15px;}
+
+        & > li > a{
+            color: $color-gray-text-2;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: block;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1.2;
+
+            &:focus{color: $color-gray-text-2;}
+            &:hover{color: $color-black;text-decoration: none;}
+            &.active,
+            &.active:hover{color: $color-red;}
+        }
+
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 10px 0 5px;
+
+            li + li{margin-top: 5px;}
+
+            a{
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                color: $color-gray-text-2;
+                font-weight: 600;
+                text-decoration: none;
+
+                &:focus{color: $color-gray-text-2;}
+                &:hover{
+                    color: $color-black;
+                    text-decoration: none;
+                }
+                &.active,
+                &.active:focus,
+                &.active:hover{color: $color-black;}
+
+                span{margin-left: 8px;white-space: nowrap;color: $color-black;}
+            }
+        }
+    }
+}
+
+.sidebar-special{
+    margin-bottom: 30px;
+    display: block;
+
+    img{
+        width: 100%!important;
+        height: 100%!important;
+    }
+}
+
+.instagram-widget{
+    margin-bottom: 30px;
+    position: relative;
+    display: block;
+    color: $color-white;
+    background-color: $color-red;
+    padding: 20px 30px;
+    text-decoration: none!important;
+
+    &-title{
+        max-width: 105px;
+        margin-bottom: 10px;
+
+        img{width: 100%;}
+    }
+
+    &-img{
+        img{width: 100%;}
+    }
+
+    &-caption{
+        margin-top: 10px;
+        color: $color-white;
+        font-size: 16px;
+        line-height: 1;
+
+        &-tag{
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-top: 3px;
+        }
+    }
+}
+
+.sidebar-socials{
+    margin-bottom: 30px;
+    position: relative;
+    background-color: $color-blue;
+    color: $color-white;
+    padding: 20px 30px;
+
+    &-title{
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        line-height: 1.1;
+    }
+
+    &-list{
+        margin: 0 -8px;
+        display: flex;
+        flex-wrap: wrap;
+
+        a{
+            display: block;
+            margin: 0 8px 5px;
+            font-size: 20px;
+            color: $color-white;
+            text-decoration: none;
+
+            &:hover{color: $color-red;}
+        }
+    }
+}
+
+.page-content-right{
+    @media (max-width: $screen-xs-max) {
+       margin-top: 40px;
+    }
+}
+
+.tags-widget{
+    margin-bottom: 30px;
+    background-color: $color-blue;
+    padding: 20px 30px;
+    color: $color-white;
+
+    .tags-widget-title{
+        margin-bottom: 0;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    &-list{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -5px;
+        min-width: 0;
+
+        a{
+            white-space: nowrap;
+            max-width: calc(100% - 10px);
+            position: relative;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 20px;
+            padding: 0 10px;
+            margin: 10px 5px 0;
+            border-radius: 10px;
+            background-color: rgba(255,255,255,.8);
+            color: $color-blue;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+
+            &:focus{color: $color-blue;}
+            &:hover,
+            &.active{color: $color-white;background-color: $color-red;}
+        }
+    }
+}
+
+.calendar-widget{
+    padding: 30px;
+    color: $color-white;
+    background-color: $color-blue;
+    margin-bottom: 30px;
+
+    .calendar-widget-title{
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 700;
+
+        @media (max-width: $screen-xs-max) {
+            text-align: center;
+        }
+    }
+
+    .datepicker-inline{
+        margin: 0 auto;
+        width: 100%;
+        max-width: 300px;
+
+        table{width: 100%;}
+    }
+
+    .calendar-widget-header{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .calendar-widget-title{margin-right: 15px;}
+
+        .dropdown-small{
+
+            [data-toggle="dropdown"]{
+                color: $color-white;
+
+                &:focus{color: $color-red}
+            }
+        }
+    }
+}
