@@ -1,57 +1,144 @@
-.contacts-content{
+.map-container{
     position: relative;
-    display: flex;
-    align-items: flex-start;
-    max-width: 880px;
-    margin-bottom: 60px;
+    overflow: hidden;
 
-    @media (max-width: $screen-xs-max) {
+    &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.7);
+        transition: opacity .2s ease-out .15s;
+        opacity: 0;
+        z-index: 5;
+        pointer-events: none;
+    }
+
+    &.list-active:before{
+        opacity: 1;
+        pointer-events: auto;
+        transition-delay: 0s;
+    }
+
+    .map-objects-toggle{
+        position: absolute;
+        z-index: 10;
+        left: 50%;
+        bottom: 16px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+        border-radius: 24px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        padding: 0 24px 0 58px;
+        color: $color-black;
+        text-decoration: none;
+        transform: translateX(-50%);
+
+        &:before{
+            content: '';
+            position: absolute;
+            left: 26px;
+            top: 43%;
+            width: 10px;
+            height: 10px;
+            border-right: 2px solid $color-black;
+            border-bottom: 2px solid $color-black;
+            transform: rotate(-135deg);
+        }
+    }
+
+    .map-objects-list{
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 50px 45px;
+        display: flex;
         flex-direction: column;
+        overflow-y: auto;
+        align-items: flex-start;
+        max-width: 375px;
+        background-color: $color-violent;
+        color: $color-white;
+        transform: translate(-50%, 110%);
+        transition: transform .15s cubic-bezier(.82,.53,.51,1.04);
+        z-index: 9;
+
+        &::-webkit-scrollbar{width:5px;border-radius: 0 0 3px 0;}
+        &::-webkit-scrollbar-track{background-color:#F6F6F6;border-radius: 0 0 3px 0;}
+        &::-webkit-scrollbar-thumb{background-color:#C8C8C8;border-radius: 0 0 3px 0;}
     }
 
-    .contacts-map{
-        flex: 1;
-        margin-right: 30px;
-        @media (max-width: $screen-xs-max) {
-            margin: 30px 0 0;
-            width: 100%;
+    &.list-active{
+        .map-objects-list{
+            transform: translate(-50%,0);
+            transition-delay: .1s;
+            transition-duration: .3s;
         }
-        iframe{
-            max-width: 100%;
 
-            @media (max-width: $screen-xs-max) {
-                width: 100%;
-                max-height: 270px;
-            }
+        .map-objects-toggle:before{
+            transform: rotate(45deg);
+            top: 33%;
         }
     }
-    .contacts-info{
-        flex: 1;
-        font-size: 16px;
-        line-height: 1.5;
 
-        @media (max-width: $screen-xs-max) {
-            order: -1;
-            width: 100%;
+
+}
+
+.contacts-map{
+    position: relative;
+    height: 410px;
+}
+
+.contacts-info{
+    margin-bottom: 16px;
+}
+.contacts-info-text{margin-bottom: 4px;}
+
+.subways-list{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+
+    .subways-list-item{
+        display: flex;
+        align-items: center;
+        margin: 0 15px 8px;
+        position: relative;
+        padding-left: 30px;
+
+        &:before{
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            left: 0;
+            top: 6px;
+            border-radius: 50%;
         }
+        &.line-blue:before{background-color: #71CFEC;}
+        &.line-red:before{background-color: #EE4713;}
+    }
 
-        h3{margin-bottom: 15px;}
-        strong{color: $color-blue;}
+    .subway-time{
+        opacity: .5;
+        margin-left: 16px;
+    }
+    .subway-link{
+        color: $color-violent;
+        text-decoration: none;
+        display: inline-block;
+        border-bottom: 1px dotted $color-violent;
 
-        a{
-            color: $color-black;
-            font-weight: 600;
-
-            &:focus{color: $color-black;}
-            &:hover{color: $color-blue;}
-        }
+        &:hover,
+        &:active{border-color: transparent;color: $color-black;}
     }
 }
 
-.feedback-form{
-    max-width: 880px;
 
-    .form-label{
-        color: $color-gray-text;
-    }
-}

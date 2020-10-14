@@ -1,0 +1,30 @@
+.advantages-item{
+    position: relative;
+    padding-left: 50px;
+    font-size: 24px;
+    line-height: 1.4;
+    margin-bottom: 24px;
+
+    &.item-negative{
+        color: rgba(0,0,0,.5);
+    }
+
+    &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: $color-yellow 50% 50% no-repeat;
+    }
+    &.item-positive:before{
+        background-image: url('../../assets/plus.svg');
+        background-size: 12px 12px;
+    }
+    &.item-negative:before{
+        background-image: url('../../assets/minus.svg');
+        background-size: 12px 2px;
+    }
+}

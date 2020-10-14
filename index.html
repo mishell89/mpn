@@ -15,198 +15,355 @@
     <meta name="msapplication-navbutton-color" content="#001b3f">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-
 </head>
-    <body class="header-main header-no-auth">
+    <body>
         <div class="page-wrap">
+            <div class="header-bck"></div>
             <header class="header">
-                <div class="header-top">
-                    <div class="container-fluid">
-                        <div class="header-top-content">
-                            <div class="header-top-menu">
-                                <ul>
-                                    <li><a href="#">Официальный сайт ПБК ЦСКА</a></li>
-                                    <li><a href="#">Билеты</a></li>
-                                    <li><a href="#">Интернет-магазин</a></li>
-                                    <li><a href="#">FAQ</a></li>
-                                </ul>
-                            </div>
-                            <div class="header-ctrls">
-                                <a href="#" class="lang-change">eng</a>
-                                <a href="tel:+74952252600" class="header-phone">+7 (495) 225-2600</a>
-                                <div class="work-time">9:00 - 21:00 МСК</div>
-                            </div>
+                <div class="container-fluid">
+                    <div class="header-content">
+                        <a href="#" class="logo"></a>
+                        <div class="header-menu">
+                            <ul class="header-menu-container">
+                               <li><a href="#aboutSection">Описание</a></li>
+                               <li><a href="#contactsSection">Локация</a></li>
+                               <li><a href="#objectsSection">Смотрите также</a></li>
+                               <li><a href="#formSection">Запись на просмотр</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </header>
             <main class="page-content">
-                <div class="main-page-top">
+                <div class="main-top">
+                    <div class="main-slider js-main-slider">
+
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="container-fluid">
+                                    <div class="main-slide-content">
+                                        <div class="main-slide-title">Многофункциональный жилой квартал HEADLINER</div>
+                                        <div class="main-slide-text">Сдача — 4 кв. 2022, есть сданные</div>
+                                    </div>
+                                </div>
+                                <img class="main-slide-img" src="<%= require('./src/assets/main-top-img.jpg') %>" alt="logo" />
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="container-fluid">
+                                    <div class="main-slide-content">
+                                        <div class="main-slide-title">Многофункциональный жилой квартал HEADLINER</div>
+                                        <div class="main-slide-text">Сдача — 4 кв. 2022, есть сданные</div>
+                                    </div>
+                                </div>
+                                <img class="main-slide-img" src="<%= require('./src/assets/main-top-img.jpg') %>" alt="logo" />
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="container-fluid">
+                                    <div class="main-slide-content">
+                                        <div class="main-slide-title">Многофункциональный жилой квартал HEADLINER</div>
+                                        <div class="main-slide-text">Сдача — 4 кв. 2022, есть сданные</div>
+                                    </div>
+                                </div>
+                                <img class="main-slide-img" src="<%= require('./src/assets/main-top-img.jpg') %>" alt="logo" />
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+
+                    </div>
+                </div>
+                <div class="page-section" id="aboutSection">
                     <div class="container-fluid">
-                        <div class="main-page-top-content">
-                            <div class="main-page-top-img">
-                                <img src="<%= require('./src/assets/main-top-img.jpg') %>">
-                            </div>
-                            <div class="main-page-top-caption">
-                                <h1>CSKA Bonus</h1>
-                                <div class="main-page-top-caption-text">
-                                    Клубная карта болельщиков ЦСКА
-                                    <br><br>
-                                    Зарабатывайте бонусы за покупку билетов или атрибутики и получайте скидки на новые покупки!
-                                </div>
-                                <div class="main-page-top-caption-btns">
-                                    <a href="#" class="btn btn-white btn-large">Войти</a>
-                                    <a href="#" class="btn btn-red btn-large">Зарегистрироваться</a>
-                                </div>
+                        <div class="page-section-nav-container">
+                            <div class="page-section-nav">
+                                <a href="#" class="nav-link active">Плюсы и минусы</a>
+                                <a href="#" class="nav-link">Аэротур</a>
+                                <a href="#" class="nav-link">Планировки</a>
+                                <a href="#" class="nav-link">Застройщик</a>
                             </div>
                         </div>
+						<div class="row">
+							<div class="col">
+								<div class="advantages-list">
+									<div class="advantages-item item-positive">Привлекательная архитектура</div>
+									<div class="advantages-item item-positive">Большой выбор квартир</div>
+									<div class="advantages-item item-positive">Поразительные виды из окон</div>
+									<div class="advantages-item item-positive">Сложившийся район со всем необходимым</div>
+									<div class="advantages-item item-positive">Сравнительно низкие цены</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="advantages-list">
+									<div class="advantages-item item-negative">Недостаток собственной инфраструктуры</div>
+									<div class="advantages-item item-negative">Частые пробки вокруг</div>
+									<div class="advantages-item item-negative">Не лучшая экология</div>
+								</div>
+							</div>
+						</div>
                     </div>
                 </div>
-                <div class="container-fluid">
 
-                    <div class="page-section">
-                        <div class="page-section-header">
-                            <h2>Преимущества CSKA Bonus</h2>
-                        </div>
-                        <div class="bonus-advantages">
-                            <div class="bonus-advantages-col">
-                                <div class="bonus-advantages-img" style="background-image: url('<%= require('./src/assets/advantage-1.jpg') %>')">
-                                    <img src="<%= require('./src/assets/advantage-1.jpg') %>">
-                                </div>
-                                <div class="bonus-advantages-caption">
-                                    <div class="bonus-advantages-title">Скидки на атрибутику</div>
-                                    <div class="bonus-advantages-text">Получайте на бонусную карту до 15% от суммы покупок в интернет-магазине! Оплачивайте баллами до 50% от стоимости покупки. </div>
-                                </div>
-                            </div>
-                            <div class="bonus-advantages-col">
-                                <div class="bonus-advantages-img" style="background-image: url('<%= require('./src/assets/advantage-2.jpg') %>')">
-                                    <img src="<%= require('./src/assets/advantage-2.jpg') %>">
-                                </div>
-                                <div class="bonus-advantages-caption">
-                                    <div class="bonus-advantages-title">Скидки на билеты</div>
-                                    <div class="bonus-advantages-text">Получайте на бонусную карту до 15% от стоимости купленных билетов! Бонусы можно потратить как при покупке билетов, так и в интернет-магазине.</div>
-                                </div>
-                            </div>
-                            <div class="bonus-advantages-col">
-                                <div class="bonus-advantages-img" style="background-image: url('<%= require('./src/assets/advantage-3.jpg') %>')">
-                                    <img src="<%= require('./src/assets/advantage-3.jpg') %>">
-                                </div>
-                                <div class="bonus-advantages-caption">
-                                    <div class="bonus-advantages-title">Дополнительные бонусы для болельщиков</div>
-                                    <div class="bonus-advantages-text">Получайте подарки и бонусы на день рождения, эксклюзивные предложения и доступ на закрытые мероприятия с участием игроков клуба, звёзд музыки ТВ и кино. </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+				<div class="page-section section-violent">
+					<div class="container-fluid">
+						<div class="preview-announce">
+							<div class="preview-announce-text">Запишитесь на просмотр и оцените всё сами!</div>
+							<div class="preview-announce-btn">
+								<a href="#formSection" class="btn btn-white-transparent js-scroll-to">Запись на просмотр</a>
+							</div>
+						</div>
+					</div>
+				</div>
 
-                    <div class="page-section">
-                        <div class="page-section-header">
-                            <h2>Как это работает?</h2>
-                        </div>
-                        <div class="how-it-works">
-                            <div class="how-it-works-col">
-                                <div class="how-it-works-item">
-                                    <div class="how-it-works-num">1</div>
-                                    <div class="how-it-works-title">Как получить карту CSKA Bonus? </div>
-                                    <div class="how-it-works-text">
-                                        <p>1.  Получите бонусную карту, при покупке на сайте или в фирменном магазине</p>
-                                        <p>2.  Закажите кобрендовую карту уникального дизайна «Сбербанк - ПБК ЦСКА» на сайте Сбербанка</p>
-                                        <p>3. Скачайте карту в Google Pay или Apple Wallet в свой телефон, по ссылке из ЛК</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="how-it-works-col">
-                                <div class="how-it-works-item">
-                                    <div class="how-it-works-num">2</div>
-                                    <div class="how-it-works-title">Получайте бонусы за покупки</div>
-                                    <div class="how-it-works-text">
-                                        <p>1.  Предъявите карту при покупке и получите кешбэк бонусами в кассах и магазинах Клуба</p>
-                                        <p>2. При покупке атрибутики и билетов на сайте, бонусы начислятся автоматически</p>
-                                        <p>3. Время действия бонусов и правила начисления определяются действующей <a href="#">программой поощрения</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="how-it-works-col">
-                                <div class="how-it-works-item">
-                                    <div class="how-it-works-num">3</div>
-                                    <div class="how-it-works-title">Покупайте с выгодой</div>
-                                    <div class="how-it-works-text">
-                                        <p>1. Авторизуйтесь или активируйте карту в личном кабинете, если планируете покупать онлайн</p>
-                                        <p>2. Сообщите, что у вас уже есть карта, если совершаете покупки в кассе или фирменном магазине</p>
-                                        <p>3. Оплачивайте бонусами до 50% от суммы покупок, <a href="#">подробные правила CSKA Bonus</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+				<div class="page-section" id="contactsSection">
+					<div class="container-fluid">
+						<h2>Локация</h2>
+						<div class="contacts-info">
+							<div class="contacts-info-text">Москва, ЦАО, Пресненский, Шмитовский проезд, вл. 39</div>
+							<div class="subways-list">
+								<div class="subways-list-item line-blue">
+									<a href="javascript:;" class="subway-link">Шелепиха</a>
+									<div class="subway-time">5 мин пешком</div>
+								</div>
+								<div class="subways-list-item line-red">
+									<a href="javascript:;" class="subway-link">Шелепиха</a>
+									<div class="subway-time">6 мин на транспорте</div>
+								</div>
+							</div>
+						</div>
+						<div class="map-container">
+							<div class="contacts-map" id="map_contacts"></div>
+							<div class="map-objects">
+								<div class="map-objects-list">
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" />
+											<div class="check-icon"></div>
+											<div class="check-text">Школы</div>
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" />
+											<div class="check-icon"></div>
+											<div class="check-text">Аптеки</div>
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" />
+											<div class="check-icon"></div>
+											<div class="check-text">Высшие учебные заведения</div>
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" />
+											<div class="check-icon"></div>
+											<div class="check-text">Больницы</div>
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" />
+											<div class="check-icon"></div>
+											<div class="check-text">Магазины</div>
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" />
+											<div class="check-icon"></div>
+											<div class="check-text">Фитнес</div>
+										</label>
+									</div>
+								</div>
+								<a href="#" class="map-objects-toggle">Объекты инфраструктуры</a>
+							</div>
+						</div>
+					</div>
 
-                </div>
+					<script src="https://api-maps.yandex.ru/2.1/?apikey=d69c3ff8-a123-4f55-9726-39500bf72472&amp;lang=ru_RU" type="text/javascript"></script>
+					<script type="text/javascript">
+						ymaps.ready(init);
+						function init(){
+							var myMap = new ymaps.Map("map_contacts", {
+								center: [55.751699, 37.526093],
+								zoom: 16
+							});
+							myMap.behaviors.disable('multiTouch');
+							myMap.behaviors.disable('scrollZoom');
+							var myPlacemark = new ymaps.Placemark( myMap.getCenter(), {
+								hintContent: 'Шмитовский проезд, 39',
+								balloonContent: 'Многофункциональный жилой квартал HEADLINER',
+							});
+							myMap.geoObjects.add(myPlacemark);
+						}
+					</script>
+				</div>
+
+				<div class="page-section" id="objectsSection">
+					<div class="container-fluid">
+						<h2>Смотрите также</h2>
+						<div class="objects-list">
+							<div class="objects-list-col">
+								<a href="#" class="object-item">
+									<div class="object-item-img">
+										<img src="<%= require('./src/assets/object-1.jpg') %>" alt="object 1" />
+										<div class="object-item-img-caption">
+											<div class="object-item-price">8 217 030 - 29 070 951₽</div>
+											<div class="object-item-caption-text">569 квартир в продаже</div>
+										</div>
+									</div>
+									<div class="object-item-title">ЖК «Level Стрешнево» (Левел Стрешнево)</div>
+									<div class="object-item-adress">Москва, СВАО</div>
+									<div class="object-item-info">
+										<div class="object-item-subway line-blue">Алексеевская</div>
+										<div class="object-item-time">5 мин</div>
+									</div>
+								</a>
+							</div>
+							<div class="objects-list-col">
+								<a href="#" class="object-item">
+									<div class="object-item-img">
+										<img src="<%= require('./src/assets/object-2.jpg') %>" alt="object 2" />
+										<div class="object-item-img-caption">
+											<div class="object-item-price">8 217 030 - 29 070 951₽</div>
+											<div class="object-item-caption-text">569 квартир в продаже</div>
+										</div>
+									</div>
+									<div class="object-item-title">ЖК «Новое Медведково»</div>
+									<div class="object-item-adress">Москва, СВАО</div>
+									<div class="object-item-info">
+										<div class="object-item-subway line-red">Алексеевская</div>
+										<div class="object-item-time">5 мин</div>
+									</div>
+								</a>
+							</div>
+							<div class="objects-list-col">
+								<a href="#" class="object-item">
+									<div class="object-item-img">
+										<img src="<%= require('./src/assets/object-3.jpg') %>" alt="object 3" />
+										<div class="object-item-img-caption">
+											<div class="object-item-price">8 217 030 - 29 070 951₽</div>
+											<div class="object-item-caption-text">569 квартир в продаже</div>
+										</div>
+									</div>
+									<div class="object-item-title">ЖК «Люберецкий»</div>
+									<div class="object-item-adress">Москва, СВАО</div>
+									<div class="object-item-info">
+										<div class="object-item-subway line-red">Алексеевская</div>
+										<div class="object-item-time">5 мин</div>
+									</div>
+								</a>
+							</div>
+							<div class="objects-list-col">
+								<a href="#" class="object-item">
+									<div class="object-item-img">
+										<img src="<%= require('./src/assets/object-4.jpg') %>" alt="object 4" />
+										<div class="object-item-img-caption">
+											<div class="object-item-price">8 217 030 - 29 070 951₽</div>
+											<div class="object-item-caption-text">569 квартир в продаже</div>
+										</div>
+									</div>
+									<div class="object-item-title">ЖК «Измайловский лес»</div>
+									<div class="object-item-adress">Москва, СВАО</div>
+									<div class="object-item-info">
+										<div class="object-item-subway line-red">Алексеевская</div>
+										<div class="object-item-time">5 мин</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="page-section section-violent" id="formSection">
+					<div class="container-fluid">
+						<form class="order-form" method="post">
+							<div class="form-content">
+								<h2>Запишитесь на просмотр и оцените всё сами!</h2>
+								<div class="form-group">
+									<input type="text" placeholder="Как вас зовут?" />
+								</div>
+								<div class="row row-small">
+									<div class="col">
+										<div class="form-group">
+											<select>
+												<option>16 сентября</option>
+												<option>16 сентября</option>
+												<option>16 сентября</option>
+											</select>
+										</div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+											<select>
+												<option>14:00</option>
+												<option>14:00</option>
+												<option>14:00</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<input type="tel" placeholder="Ваш телефон" />
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" />
+										<div class="check-icon"></div>
+										<div class="check-text">Напомните мне за 2 часа до визита</div>
+									</label>
+								</div>
+								<div class="form-btn">
+									<button type="submit" class="btn btn-white">Отправить</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
 
             </main>
-            <footer class="footer">
-                <div class="footer-content">
-                    <div class="footer-auth-wrap">
-                        <div class="container-fluid">
-                            <div class="footer-auth">
-                                <div class="footer-auth-form-title">Получить карту CSKA Bonus</div>
-                                <div class="footer-auth-btns">
-                                    <a href="#" class="btn btn-large btn-white">Войти</a>
-                                    <a href="#" class="btn btn-large btn-white-border">Зарегистрироваться</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-menu">
-                        <div class="container-fluid">
-                            <ul class="footer-menu-list">
-                                <li><a href="#">Официальный сайт</a></li>
-                                <li><a href="#">Билеты</a></li>
-                                <li><a href="#">Интернет-магазин</a></li>
-                                <li><a href="#">CSKA Bonus</a></li>
-                                <li><a href="#">FAQ</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="footer-bottom">
-                        <div class="container-fluid">
-                            <div class="footer-bottom-content">
-                                <div class="footer-logo-container">
-                                    <div class="footer-logo"></div>
-                                    <div class="footer-logo-info">
-                                        <div class="footer-logo-title"></div>
-                                        <div class="footer-copyright">
-                                            Все права защищены<br>
-                                            Copyright ® 1999-2020
-                                        </div>
-                                    </div>
-                                </div>
-                                <ul class="footer-links">
-                                   <li><a href="#">Политика конфиденциальности</a></li>
-                                   <li><a href="#">Клиентское соглашение</a></li>
-                                   <li><a href="#">Обработка персональных данных</a></li>
-                                   <li><a href="#">Результаты СОУТ</a></li>
-                                   <li><a href="#">Правила продажи билетов</a></li>
-                                </ul>
-                                <div class="footer-info">
-                                    <div class="footer-contacts">
-                                        <p>125167, Москва,  Ленинградский пр. 39, стр. 3</p>
-                                        <p><span>Телефон:</span> <a href="tel:+74952252662">+7 (495) 225-2662</a></p>
-                                        <p><span>Факс:</span> +7 (495) 225-2661</p>
-                                    </div>
 
-                                    <div class="footer-socials">
-                                        <a href="#" target="_blank"><span class="icon-youtube"></span></a>
-                                        <a href="#" target="_blank"><span class="icon-facebook"></span></a>
-                                        <a href="#" target="_blank"><span class="icon-twitter"></span></a>
-                                        <a href="#" target="_blank"><span class="icon-instagram"></span></a>
-                                        <a href="#" target="_blank"><span class="icon-vk"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <footer class="footer">
+				<div class="container-fluid">
+					<div class="footer-content">
+						<div class="footer-col">
+							<div class="footer-menu-section">
+								<a href="#" class="footer-menu-title footer-menu-toggle">Новостройки</a>
+								<ul class="footer-menu-list">
+									<li><a href="#">Квартиры в Москве</a></li>
+									<li><a href="#">Квартиры в Новой Москве</a></li>
+									<li><a href="#">Квартиры в Подмосковье</a></li>
+									<li><a href="#">В Москве</a></li>
+									<li><a href="#">В Подмосковье</a></li>
+									<li><a href="#">В Новой Москве</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer-col">
+							<div class="footer-menu-section">
+								<a href="#" class="footer-menu-title footer-menu-toggle">Популярное</a>
+								<ul class="footer-menu-list">
+									<li><a href="#">В рассрочку</a></li>
+									<li><a href="#">Военная ипотека</a></li>
+									<li><a href="#">До 4 млн</a></li>
+									<li><a href="#">До 6 млн</a></li>
+									<li><a href="#">Внутри МКАД</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer-col">
+							<div class="footer-contacts">
+								<div class="footer-menu-title">Рекламный отдел</div>
+								<a href="tel:+74959874247">+7 (495) 987-42-47</a> доб. 501<br />
+								<a href="mailto:kp@novostroy-m.ru">kp@novostroy-m.ru</a>
+							</div>
+						</div>
+						<div class="footer-col">
+							<div class="copyright">© 2011—2020 Новострой-М <br />Всё, что нужно знать о новостройках</div>
+						</div>
+					</div>
+				</div>
             </footer>
         </div>
     </body>
