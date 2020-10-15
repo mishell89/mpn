@@ -140,7 +140,7 @@ input[type="tel"].error,
 input[type="time"].error,
 input[type="url"].error,
 textarea.error,
-.form-error select{ 
+.form-error select{
     border-color: $color-red!important;
 }
 
@@ -161,8 +161,27 @@ textarea.error,
 
 .form-content{
     max-width: 545px;
+
+    @media (max-width: $screen-sm-max) {
+        max-width: none;
+    }
+
     .checkbox{
         margin-top: 24px;
     }
     .form-btn{margin-top: 24px;}
+
+    .row{
+        display: flex;
+        @media (max-width: $screen-xs-max) {
+            display: block;
+        }
+
+        .col{
+            width: 50%;
+            @media (max-width: $screen-xs-max) {
+                width: auto;
+            }
+        }
+    }
 }

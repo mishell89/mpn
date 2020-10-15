@@ -47,12 +47,20 @@ $(document).ready(function () {
         e.preventDefault();
        $('.map-container').toggleClass('list-active');
     })
+    .on('click', '.nav-link', function (e) {
+        e.preventDefault();
+		$(this).parents('.tabs-content').find('.tab-pane').removeClass('active');
+		$($(this).attr('href')).addClass('active');
+		$(this).parents('.tabs-content').find('.nav-link').removeClass('active');
+		$(this).addClass('active');
+    })
     .on('click', '.header-menu a', function (e) {
     	e.preventDefault();
        	var targ = $(this).attr('href');
        	scrollToElement(targ, -100);
        	$('.header-menu a').removeClass('active');
        	$(this).addClass('active');
+		$('body').removeClass('menu-opened')
     });
 
     $(window).scroll(function () {

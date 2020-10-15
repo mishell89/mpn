@@ -15,27 +15,54 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+
+        @media (max-width: $screen-sm-max) {
+           min-height: 490px;
+        }
+        @media (max-width: $screen-xs-max) {
+            min-height: 235px;
+        }
     }
 
     .main-slide-img{
         position: absolute;
         top: 0;
         height: 100%;
-        width: 75%;
+        width: 65%;
         left: 35%;
         object-fit: cover;
         opacity: .8;
+        @media (max-width: $screen-sm-max) {
+            left: 25%;
+            width: 75%;
+        }
+        @media (max-width: $screen-xs-max) {
+            left: 50%;
+            width: 50%;
+        }
     }
 
     .main-slider{
         padding-bottom: 108px;
         color: $color-white;
+        @media (max-width: $screen-xs-max) {
+            padding-bottom: 60px;
+        }
     }
 
     .swiper-pagination{
         left: 35%;
         bottom: 34px;
         text-align: left;
+
+        @media (max-width: $screen-sm-max) {
+            left: 25%;
+        }
+        @media (max-width: $screen-xs-max) {
+            left: 0;
+            text-align: center;
+            bottom: 12px;
+        }
     }
 
     .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet{
@@ -44,12 +71,20 @@
         margin: 0 5px 0 0;
         background: none;
         border-radius: 0;
+        position: relative;
+
+        @media (max-width: $screen-xs-max) {
+           margin: 0 5px;
+        }
 
         &:before{
             content: '';
             position: absolute;
             width: 12px;
             height: 12px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
             background: rgba(255,255,255,.3);
             transition: background-color .2s ease-out;
         }
@@ -65,5 +100,14 @@
         font-size: 56px;
         line-height: 1.2;
         margin-bottom: 16px;
+
+        @media (max-width: $screen-sm-max) {
+            font-size: 40px;
+        }
+
+        @media (max-width: $screen-xs-max) {
+           font-size: 24px;
+            max-width: 270px;
+        }
     }
 }
